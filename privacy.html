@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Cadent Family · Longtable Labs</title>
+  <meta name="description" content="How Cadent Family handles your data: what is stored, how schedule photos are read, and how to delete your account.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235b5bd6'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>C</text></svg>">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">C</span>
+        <span>Cadent Family<small>by Longtable Labs</small></span>
+      </a>
+      <nav class="main" aria-label="Primary">
+        <a href="index.html#how">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="wrap prose">
+        <h1>Privacy Policy</h1>
+        <p class="sub">Cadent Family, a product of Longtable Labs</p>
+        <p class="meta">Last updated: <!-- REVIEW: set the real go-live date -->[DATE TO BE SET AT PUBLICATION]</p>
+      </div>
+    </div>
+
+    <section style="padding-top:0">
+      <div class="wrap prose">
+
+        <div class="callout">
+          <p><strong>A note while this is a draft.</strong> This policy is written to be
+          accurate to how Cadent Family works today. Please read every line before it goes
+          live — it is a legal statement about how you handle other people's data, including
+          children's. Fill in the bracketed items (date, legal entity details, jurisdiction)
+          and have it reviewed if you are unsure.</p>
+        </div>
+
+        <p>
+          This policy explains what information Cadent Family collects, how it is used, and
+          the choices you have. Longtable Labs (&ldquo;we&rdquo;, &ldquo;us&rdquo;) makes
+          Cadent Family. If anything here is unclear, contact us at
+          <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>.
+        </p>
+
+        <h2>What we collect</h2>
+        <p>We collect only what the app needs to work as a shared family organiser:</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Your name and email address</td><td>To create your account, identify you within your family, and sign you in.</td></tr>
+            <tr><td>Calendar events, tasks, chores, shopping items and meal plans you create</td><td>These are the content of the app — the shared organiser itself.</td></tr>
+            <tr><td>Photos of schedules you choose to upload</td><td>So they can be read and turned into suggested calendar events (see below).</td></tr>
+            <tr><td>Profile photos and avatars you choose to add</td><td>To personalise how family members appear in the app.</td></tr>
+            <tr><td>Notification settings and device push tokens</td><td>To send the reminders you ask for, and to respect your quiet hours.</td></tr>
+          </tbody>
+        </table>
+        <p>
+          We do <strong>not</strong> collect your contacts, your location, your browsing
+          history, or advertising identifiers. We do not use analytics or advertising
+          trackers.
+        </p>
+
+        <h2 id="how-schedule-photos-are-read">How schedule photos are read</h2>
+        <p>
+          The distinguishing feature of Cadent Family is that you can photograph a paper
+          schedule — a school newsletter, a sports card — and the app reads it into suggested
+          calendar events for you to review.
+        </p>
+        <ul>
+          <li>
+            When you upload such a photo, its image is <strong>sent to Anthropic's API</strong>
+            (Anthropic, the maker of the Claude AI models) to be read and turned into text and
+            dates.
+          </li>
+          <li>
+            Anthropic processes the image to return the schedule it finds. Under Anthropic's
+            commercial API terms, <strong>data submitted through the API is not used to train
+            their models.</strong>
+          </li>
+          <li>
+            The events the photo produces are shown to you for review. <strong>Nothing is added
+            to your calendar until you approve it.</strong>
+          </li>
+          <li>
+            You can read Anthropic's privacy practices at
+            <a href="https://www.anthropic.com/legal/privacy" rel="noopener">anthropic.com/legal/privacy</a>.
+            <!-- REVIEW: confirm this link and Anthropic's current commercial-terms language before publishing. -->
+          </li>
+        </ul>
+        <p>
+          If you do not use the photo-import feature, no images are sent to Anthropic.
+        </p>
+
+        <h2>Where your data lives</h2>
+        <p>
+          Your data is stored in Cadent Family's own database, used solely to provide the app
+          to you and your family. <strong>We do not sell your data, and we do not share it with
+          third parties for their own marketing.</strong> The only external service that
+          receives your content is Anthropic's API, and only the schedule photos you choose to
+          upload, only for the purpose described above.
+        </p>
+        <!-- REVIEW: if/when you use a hosting provider (e.g. a cloud database or app host),
+             name it here as a processor. As of this draft the app runs against a self-hosted
+             backend and no third-party host is involved. -->
+
+        <h2>Family sharing and privacy within a family</h2>
+        <p>
+          Cadent Family is shared by design: members of the same family see the shared calendar,
+          lists and meal plan. You control the visibility of individual events — everyone, just
+          you, or a chosen list of people. Parents can see their children's events; adults keep
+          their own events private from one another unless shared. Anyone you invite to your
+          family, using an invite code, can see the shared content of that family.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          Cadent Family is intended to be set up and managed by a parent or guardian, who adds
+          family members including children. A child's calendar information is entered and
+          managed by the adults in their family. We do not knowingly collect information
+          directly from children outside of this family context.
+          <!-- REVIEW: if you intend to allow children to hold their own login, you will likely
+               need COPPA (US) / age-of-consent handling. Confirm your intended model here. -->
+        </p>
+
+        <h2>How long we keep your data</h2>
+        <p>
+          We keep your data for as long as your account is active. When you delete your account,
+          your personal data and the content you own are removed as described below.
+        </p>
+
+        <h2 id="how-to-delete-your-account-and-your-data">How to delete your account and your data</h2>
+        <p>You can have your account and its data deleted at any time:</p>
+        <ul>
+          <li>
+            <strong>Email us</strong> at
+            <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>
+            from the address on your account, asking to delete your account. We will confirm and
+            remove your personal data and the content you own.
+            <!-- REVIEW: once an in-app "Delete account" control exists, describe it here as the
+                 primary method. Google Play increasingly expects an in-app path. -->
+          </li>
+          <li>
+            Deleting your membership removes you from your family. Shared content you created may
+            remain visible to the rest of your family unless you ask for it to be removed too —
+            tell us in your request if you want that.
+          </li>
+        </ul>
+
+        <h2>Security</h2>
+        <p>
+          Access to your family's data is restricted to members of that family, enforced both in
+          the app and in the database. We take reasonable measures to protect your information,
+          though no method of storage or transmission is ever completely secure.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          If we change this policy, we will update the date at the top and, for significant
+          changes, tell you within the app or by email.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions or requests about your data:
+          <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>.<br>
+          Longtable Labs<!-- REVIEW: add legal entity name, postal address, and jurisdiction if required for your stores/region. -->
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div style="max-width:20rem">
+        <a class="brand" href="index.html" style="margin-bottom:.8rem">
+          <span class="mark" aria-hidden="true">C</span>
+          <span>Cadent Family<small>by Longtable Labs</small></span>
+        </a>
+        <p style="font-size:.9rem;margin:0">A shared family organiser. The product proposes; you decide.</p>
+      </div>
+      <nav aria-label="Company">
+        <span class="fh">Company</span>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy policy</a>
+      </nav>
+    </div>
+    <div class="wrap">
+      <p class="fineprint">© 2026 Longtable Labs. Not affiliated with Google, Microsoft, or Apple.</p>
+    </div>
+  </footer>
+</body>
+</html>
