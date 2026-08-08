@@ -1,21 +1,59 @@
+/* Self-hosted fonts — no third-party requests. Files in assets/fonts/.
+   Both are variable woff2 (one file per subset covers the weight range). */
+@font-face {
+  font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('assets/fonts/fraunces-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('assets/fonts/fraunces-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Nunito'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('assets/fonts/nunito-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url('assets/fonts/nunito-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 /* Longtable Labs — Cadent Family
-   Plain, warm, static. No build step, no dependencies. */
+   Warm & lively, static. No build step.
+   Type: Fraunces (display serif) + Nunito (rounded body). */
 
 :root {
-  --accent: #5b5bd6;          /* shared with the app's brand accent */
-  --accent-dark: #4a4ab8;
-  --accent-tint: #eeeefb;
-  --ink: #26241f;             /* warm near-black */
-  --ink-soft: #55514a;
-  --ink-faint: #7a746b;
-  --paper: #fbf9f5;           /* warm off-white */
-  --card: #ffffff;
-  --line: #e8e3da;
-  --ok: #2e7d5b;
+  /* warm family palette */
+  --coral: #e8623d;           /* primary — sunset coral */
+  --coral-deep: #c4482a;
+  --amber: #f4a13c;           /* honey amber */
+  --honey: #f6c453;
+  --plum: #5b2a4e;            /* headings — deep berry-plum */
+  --berry: #c33c6b;
+  --teal: #1f9e8f;
+  --grape: #6a4aa0;           /* ties to the purple logo */
+
+  --accent: var(--coral);
+  --accent-dark: var(--coral-deep);
+  --accent-tint: #fbe1d6;
+
+  --ink: #3a2530;             /* warm plum-brown, not black */
+  --ink-soft: #6d545b;
+  --ink-faint: #9a838b;
+
+  --paper: #fdeadf;           /* warm blush — off the beige/white */
+  --card: #fff6f1;            /* warm off-white */
+  --line: #f3d8ca;
+
+  --ok: #1f9e8f;
   --max: 68rem;
-  --radius: 14px;
-  --shadow: 0 1px 2px rgba(38, 36, 31, .06), 0 8px 24px rgba(38, 36, 31, .06);
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(90, 42, 46, .05), 0 14px 34px rgba(196, 72, 42, .12);
+  --font: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
 }
 
 * { box-sizing: border-box; }
@@ -32,7 +70,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.14; letter-spacing: -0.005em; color: var(--plum); }
 h1 { font-size: clamp(2rem, 5vw, 3.1rem); margin: 0 0 .5em; }
 h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin: 0 0 .6em; }
 h3 { font-size: 1.2rem; margin: 0 0 .4em; }
@@ -55,8 +93,8 @@ a:hover { color: var(--accent); }
 /* Header */
 .site-header {
   border-bottom: 1px solid var(--line);
-  background: rgba(251, 249, 245, .9);
-  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(253, 234, 223, .82);
+  backdrop-filter: saturate(180%) blur(10px);
   position: sticky; top: 0; z-index: 50;
 }
 .site-header .wrap {
@@ -88,7 +126,13 @@ nav.main a:hover { color: var(--accent); }
 .btn.ghost:hover { border-color: var(--accent); background: var(--accent-tint); }
 
 /* Hero */
-.hero { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.hero {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(1100px 460px at 82% -12%, rgba(244, 161, 60, .32), transparent 60%),
+    radial-gradient(900px 420px at 0% 8%, rgba(195, 60, 107, .14), transparent 55%),
+    linear-gradient(160deg, #ffe0cc 0%, var(--paper) 62%);
+}
 .hero .lead {
   font-size: clamp(1.15rem, 2.5vw, 1.4rem); color: var(--ink-soft); max-width: 34rem; margin: 0 0 1.6em;
 }
@@ -100,7 +144,7 @@ nav.main a:hover { color: var(--accent); }
 
 /* Sections */
 section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
-.section-tint { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-tint { background: linear-gradient(180deg, #fff2ea, #ffe8da); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-head { max-width: 40rem; margin-bottom: 2.5rem; }
 .section-head p { font-size: 1.1rem; }
 
@@ -111,7 +155,14 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
   padding: 1.6rem; box-shadow: var(--shadow);
 }
 .section-tint .feature { background: var(--paper); }
-.feature .ico { width: 42px; height: 42px; border-radius: 11px; background: var(--accent-tint); color: var(--accent-dark); display: grid; place-items: center; margin-bottom: 1rem; font-size: 1.3rem; }
+.feature .ico { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-tint); color: var(--accent-dark); display: grid; place-items: center; margin-bottom: 1rem; font-size: 1.3rem; }
+/* playful warm variety across the feature icons */
+.features .feature:nth-child(6n+1) .ico { background: #fbe1d6; color: #c4482a; }
+.features .feature:nth-child(6n+2) .ico { background: #fdeecb; color: #b47a12; }
+.features .feature:nth-child(6n+3) .ico { background: #f9dbe6; color: #b02e5c; }
+.features .feature:nth-child(6n+4) .ico { background: #d6efeb; color: #12796d; }
+.features .feature:nth-child(6n+5) .ico { background: #e8e1f4; color: #6a4aa0; }
+.features .feature:nth-child(6n+6) .ico { background: #ffe4d1; color: #c4482a; }
 .feature h3 { margin-bottom: .3rem; }
 .feature p { margin: 0; font-size: .98rem; }
 
@@ -130,7 +181,7 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .shot figure { margin: 0; }
 .shot .frame {
   aspect-ratio: 9 / 19.5; border-radius: 26px; overflow: hidden;
-  background: linear-gradient(160deg, #efeafb, #e6e1f6);
+  background: linear-gradient(160deg, #ffe1d1, #ffd2bd);
   border: 1px solid var(--line); box-shadow: var(--shadow);
   display: grid; place-items: center; text-align: center; padding: 1.5rem;
 }
@@ -152,8 +203,9 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 
 /* Email capture */
 .capture {
-  background: linear-gradient(135deg, var(--accent), #7a5cf0); color: #fff;
-  border-radius: 20px; padding: clamp(2rem, 5vw, 3rem); box-shadow: var(--shadow);
+  background: linear-gradient(135deg, var(--berry) 0%, var(--coral) 45%, var(--amber) 100%);
+  color: #fff;
+  border-radius: 22px; padding: clamp(2rem, 5vw, 3rem); box-shadow: var(--shadow);
 }
 .capture h2 { color: #fff; }
 .capture p { color: rgba(255,255,255,.9); }
@@ -161,8 +213,8 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .capture input[type=email] {
   flex: 1 1 14rem; padding: .85rem 1rem; border-radius: 10px; border: none; font-size: 1rem; font-family: var(--font);
 }
-.capture .btn { background: #fff; color: var(--accent-dark); }
-.capture .btn:hover { background: #f2f0ff; color: var(--accent-dark); }
+.capture .btn { background: #fff; color: var(--coral-deep); }
+.capture .btn:hover { background: #fff2ea; color: var(--coral-deep); }
 .capture .fineprint { font-size: .8rem; color: rgba(255,255,255,.8); margin-top: .9rem; }
 
 /* Live demo video */
