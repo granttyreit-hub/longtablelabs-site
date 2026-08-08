@@ -57,36 +57,6 @@
       </div>
     </div>
 
-    <!-- THE PITCH / differentiator -->
-    <section class="section-tint" id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Photograph the schedule. Approve what matters.</h2>
-          <p>
-            The hardest part of a shared calendar is typing everything in. Cadent Family reads
-            a photo of a paper schedule for you — and then hands the decisions back to you.
-          </p>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="num" aria-hidden="true">1</div>
-            <h3>Take a photo</h3>
-            <p>Snap the school newsletter, the season card, the practice sheet — however it arrived.</p>
-          </div>
-          <div class="step">
-            <div class="num" aria-hidden="true">2</div>
-            <h3>It reads the dates</h3>
-            <p>Cadent finds the dates, times and repeats, and shows you a plain list of what it found.</p>
-          </div>
-          <div class="step">
-            <div class="num" aria-hidden="true">3</div>
-            <h3>You approve</h3>
-            <p>Nothing is added until you say so. Keep the events you want, drop the rest, then it's on everyone's phone.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- WHAT CADENT MEANS -->
     <section>
       <div class="wrap">
@@ -147,6 +117,31 @@
       </div>
     </section>
 
+    <!-- LIVE DEMO -->
+    <section>
+      <div class="wrap">
+        <div class="section-head centered">
+          <h2>See it in action</h2>
+          <p>A quick look at making it yours — add and edit family members, set a photo
+          avatar, pick each person's colour, and drop a photo behind the month. All in the
+          real app.</p>
+        </div>
+        <div class="demo-showcase">
+          <div class="demo-phone">
+            <video autoplay loop muted playsinline preload="metadata"
+                   poster="assets/demo/customization-demo-poster.jpg"
+                   aria-label="Screen recording of Cadent Family: editing a family member's name, role and accent colour, setting a photo avatar, then choosing a photo background for the month calendar.">
+              <source src="assets/demo/customization-demo.webm" type="video/webm">
+              <source src="assets/demo/customization-demo.mp4" type="video/mp4">
+              <img src="assets/demo/customization-demo-poster.jpg"
+                   alt="Cadent Family month view for August over an ocean photo background, with colour-coded family events.">
+            </video>
+          </div>
+          <p class="cta-note">A real screen recording — plays on a loop, no sound.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- SCREENSHOTS -->
     <section class="section-tint">
       <div class="wrap">
@@ -190,6 +185,36 @@
               </div>
               <figcaption>Today, at a glance</figcaption>
             </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PITCH / differentiator -->
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Photograph the schedule. Approve what matters.</h2>
+          <p>
+            The hardest part of a shared calendar is typing everything in. Cadent Family reads
+            a photo of a paper schedule for you — and then hands the decisions back to you.
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="num" aria-hidden="true">1</div>
+            <h3>Take a photo</h3>
+            <p>Snap the school newsletter, the season card, the practice sheet — however it arrived.</p>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true">2</div>
+            <h3>It reads the dates</h3>
+            <p>Cadent finds the dates, times and repeats, and shows you a plain list of what it found.</p>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true">3</div>
+            <h3>You approve</h3>
+            <p>Nothing is added until you say so. Keep the events you want, drop the rest, then it's on everyone's phone.</p>
           </div>
         </div>
       </div>
@@ -273,5 +298,19 @@
       <p class="fineprint">© 2026 Longtable Labs. Cadent Family is a product of Longtable Labs. Not affiliated with Google, Microsoft, or Apple.</p>
     </div>
   </footer>
+
+  <script>
+    // Respect reduced-motion: don't autoplay the demo; offer manual controls.
+    (function () {
+      var mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq && mq.matches) {
+        document.querySelectorAll('video[autoplay]').forEach(function (v) {
+          v.removeAttribute('autoplay');
+          v.setAttribute('controls', '');
+          try { v.pause(); } catch (e) {}
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

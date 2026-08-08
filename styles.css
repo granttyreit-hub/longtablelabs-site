@@ -165,6 +165,15 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .capture .btn:hover { background: #f2f0ff; color: var(--accent-dark); }
 .capture .fineprint { font-size: .8rem; color: rgba(255,255,255,.8); margin-top: .9rem; }
 
+/* Live demo video */
+.demo-showcase { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.demo-phone {
+  max-width: 320px; width: 100%; border-radius: 28px; overflow: hidden;
+  border: 1px solid var(--line); box-shadow: var(--shadow); background: #000;
+}
+.demo-phone video { width: 100%; height: auto; display: block; }
+.section-head.centered { margin-left: auto; margin-right: auto; text-align: center; }
+
 /* Cadent definition block */
 .definition {
   max-width: 46rem; margin: 0 auto; display: flex; gap: 1.8rem; align-items: center;
