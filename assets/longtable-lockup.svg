@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 190" role="img" aria-label="Longtable Labs" font-family="Georgia, 'Iowan Old Style', serif">
+  <!-- long table -->
+  <g transform="translate(0,20)">
+    <rect x="0" y="52" width="300" height="13" fill="#E3D3B4"/>
+    <rect x="0" y="65" width="300" height="6" fill="#7A5237"/>
+    <rect x="16" y="71" width="268" height="6" fill="#8A5E42"/>
+    <rect x="27" y="110" width="241" height="5" fill="#8A5E42" opacity="0.85"/>
+    <rect x="18" y="77" width="9" height="51" fill="#E3D3B4"/>
+    <rect x="268" y="77" width="9" height="51" fill="#E3D3B4"/>
+    <rect x="96" y="77" width="7" height="51" fill="#8A5E42"/>
+    <rect x="192" y="77" width="7" height="51" fill="#8A5E42"/>
+    <circle cx="34" cy="32" r="10" fill="#7EA9C9"/>
+    <circle cx="87" cy="32" r="10" fill="#7EA9C9"/>
+    <circle cx="140" cy="32" r="10" fill="#7EA9C9"/>
+    <circle cx="193" cy="32" r="10" fill="#7EA9C9"/>
+    <circle cx="246" cy="32" r="10" fill="#D9A62B"/>
+  </g>
+  <!-- wordmark -->
+  <g transform="translate(345,0)">
+    <text x="0" y="150" font-size="58" fill="#E3D3B4">Longtable</text>
+    <text x="3" y="178" font-size="16" letter-spacing="15" fill="#7EA9C9" font-family="Helvetica, Arial, sans-serif">L A B S</text>
+  </g>
+</svg>
