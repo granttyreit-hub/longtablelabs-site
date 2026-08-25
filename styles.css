@@ -264,6 +264,9 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
   box-shadow: var(--shadow); max-width: 54rem;
 }
 .product-card .p-logo { width: 78px; height: 78px; flex: 0 0 auto; }
+/* The Cadent mark is the app's own icon art (a photographed oak tile), so it
+   carries its own square field — round it so it reads as an app icon. */
+.p-logo, .def-mark, .cadent-mark { border-radius: 22%; }
 .product-card .tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; color: var(--lt-coffee); }
 .product-card h3 { font-family: var(--display); color: var(--plum); font-size: 1.5rem; margin: .15rem 0 .35rem; }
 .product-card p { margin: 0 0 1rem; }
