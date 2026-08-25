@@ -14,6 +14,7 @@ device's native portrait resolution):
 | `week-view.png` | Week view, several people's events colour-coded |
 | `privacy-picker.png` | The "who can see this" picker on an event |
 | `today-view.png` | Today screen with greeting and upcoming events |
+| `theme-packs.png` | The theme gallery — light/dark plus the pack shelf |
 
 ## Rules (from the brief)
 
