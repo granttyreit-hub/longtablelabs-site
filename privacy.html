@@ -30,8 +30,8 @@
     <div class="page-header">
       <div class="wrap prose">
         <h1>Privacy Policy</h1>
-        <p class="sub">Cadent Family, a product of Longtable Labs</p>
-        <p class="meta">Last updated: August 7, 2026</p>
+        <p class="sub">Cadent Family, a product of Longtable Labs LLC</p>
+        <p class="meta">Last updated: September 12, 2026</p>
       </div>
     </div>
 
@@ -39,23 +39,29 @@
       <div class="wrap prose">
 
         <!-- OWNER NOTES (invisible to visitors):
-             DECIDED 2026-08-07:
-               - Entity: trading name "Longtable Labs" only (no registered entity to name).
+             DECIDED 2026-08-07, updated 2026-09-12:
+               - Entity: Longtable Labs LLC (legal name). Plain brand mentions stay "Longtable Labs".
                - No postal address published for now — email-only contact. Add a mailing
                  address here if a store/region requires one at submission time.
+               - Deletion section matches migration 030 and the in-app Delete account screen
+                 (app 1.0.0 (2)). This page is Play's "Delete account URL"; do not soften or
+                 broaden those claims without checking the app code.
+               - Service providers named: Render, Firebase Authentication, Firebase Cloud
+                 Messaging, an email delivery provider (reminder emails), Anthropic.
              STILL OPEN:
-               - In-app "Delete account" control — once it exists, describe it as the primary
-                 deletion method (Google Play increasingly expects an in-app path).
                - Confirm the Anthropic links and their current commercial-terms wording.
-               - Name any hosting provider as a processor once the app is deployed to one.
              Have a lawyer review if you are unsure — this governs other people's data,
              including children's. -->
 
         <p>
           This policy explains what information Cadent Family collects, how it is used, and
-          the choices you have. Longtable Labs (&ldquo;we&rdquo;, &ldquo;us&rdquo;) makes
+          the choices you have. Longtable Labs LLC (&ldquo;we&rdquo;, &ldquo;us&rdquo;) makes
           Cadent Family. If anything here is unclear, contact us at
           <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>.
+        </p>
+        <p>
+          To delete your account, see
+          <a href="#how-to-delete-your-account-and-your-data">how to delete your account and your data</a>.
         </p>
 
         <h2>What we collect</h2>
@@ -70,6 +76,8 @@
             <tr><td>Photos of schedules you choose to upload</td><td>So they can be read and turned into suggested calendar events (see below).</td></tr>
             <tr><td>Profile photos and avatars you choose to add</td><td>To personalise how family members appear in the app.</td></tr>
             <tr><td>Notification settings and device push tokens</td><td>To send the reminders you ask for, and to respect your quiet hours.</td></tr>
+            <tr><td>Chores you complete, the points they earn, and rewards you ask for</td><td>To keep each member's points balance, and so a parent can approve rewards.</td></tr>
+            <tr><td>Links with people in other households, and the events shared across them</td><td>So you can see the events someone in another household chooses to share with you, and share yours with them.</td></tr>
           </tbody>
         </table>
         <p>
@@ -113,13 +121,27 @@
         <p>
           Your data is stored in Cadent Family's own database, used solely to provide the app
           to you and your family. <strong>We do not sell your data, and we do not share it with
-          third parties for their own marketing.</strong> The only external service that
-          receives your content is Anthropic's API, and only the schedule photos you choose to
-          upload, only for the purpose described above.
+          third parties for their own marketing.</strong>
         </p>
-        <!-- REVIEW: if/when you use a hosting provider (e.g. a cloud database or app host),
-             name it here as a processor. As of this draft the app runs against a self-hosted
-             backend and no third-party host is involved. -->
+        <p>These service providers handle data on our behalf, only to run the app:</p>
+        <ul>
+          <li><strong>Render</strong> hosts the app's server and database, where your account and
+            your family's content are stored.</li>
+          <li><strong>Google Firebase Authentication</strong> handles sign-in and holds your email
+            address and sign-in account.</li>
+          <li><strong>Google Firebase Cloud Messaging</strong> delivers push notifications, such as
+            your reminders, to your devices.</li>
+          <li><strong>An email delivery provider</strong> sends reminder emails, if you receive
+            them.</li>
+          <li><strong>Anthropic's API</strong> reads the schedule photos you choose to upload, as
+            described above. No other service receives those photos.</li>
+        </ul>
+        <p>
+          If your family follows an outside calendar by its web address, our server fetches that
+          address to keep it up to date. If your family shares its calendar by link, anyone with
+          the link can see the events marked visible to the whole family; making a new link stops
+          the old one working.
+        </p>
 
         <h2>Family sharing and privacy within a family</h2>
         <p>
@@ -143,26 +165,53 @@
         <h2>How long we keep your data</h2>
         <p>
           We keep your data for as long as your account is active. When you delete your account,
-          your personal data and the content you own are removed as described below.
+          your personal data is deleted, and events, tasks and list items you added to a family
+          that carries on stay with that family, as described below.
         </p>
 
         <h2 id="how-to-delete-your-account-and-your-data">How to delete your account and your data</h2>
-        <p>You can have your account and its data deleted at any time:</p>
+        <p>You can delete your Cadent Family account at any time, in the app or by email.</p>
+
+        <h3>In the app</h3>
+        <p>
+          Tap your picture at the top right, then <strong>Delete account</strong>. Or, if you are
+          not in a family yet, tap <strong>Delete account</strong> below <strong>Sign out</strong>.
+          The app shows what will happen to each family before you confirm.
+        </p>
+
+        <h3>Without the app</h3>
+        <p>
+          Email <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a> from the
+          address on your account and ask us to delete it. We will confirm and delete your account
+          within 30 days.
+        </p>
+
+        <h3>What is deleted</h3>
         <ul>
-          <li>
-            <strong>Email us</strong> at
-            <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>
-            from the address on your account, asking to delete your account. We will confirm and
-            remove your personal data and the content you own.
-            <!-- REVIEW: once an in-app "Delete account" control exists, describe it here as the
-                 primary method. Google Play increasingly expects an in-app path. -->
-          </li>
-          <li>
-            Deleting your membership removes you from your family. Shared content you created may
-            remain visible to the rest of your family unless you ask for it to be removed too —
-            tell us in your request if you want that.
-          </li>
+          <li>Your name, email address and sign-in account.</li>
+          <li>Photos of you and photos you uploaded, unless another member's avatar or background
+            uses them.</li>
+          <li>Your devices and notification settings.</li>
+          <li>Your links with other households.</li>
+          <li>Your points history.</li>
         </ul>
+
+        <h3>What is kept</h3>
+        <p>
+          Events, tasks and list items you added to a family that carries on stay with that family,
+          with your name removed from them. Ask in your email if you want them removed too.
+        </p>
+
+        <h3>If you are a family's only parent</h3>
+        <p>
+          Another adult in the family with an account becomes its parent. If there is no such
+          adult, the family is deleted with everything in it.
+        </p>
+
+        <h3>How long it takes</h3>
+        <p>
+          In-app deletion is immediate. Email requests are completed within 30 days.
+        </p>
 
         <h2>Security</h2>
         <p>
@@ -181,7 +230,7 @@
         <p>
           Questions or requests about your data:
           <a href="mailto:privacy@longtablelabs.com">privacy@longtablelabs.com</a>.<br>
-          Longtable Labs<!-- REVIEW: add legal entity name, postal address, and jurisdiction if required for your stores/region. -->
+          Longtable Labs LLC<!-- REVIEW: add postal address and jurisdiction if required for your stores/region. -->
         </p>
 
       </div>
@@ -205,7 +254,7 @@
       </nav>
     </div>
     <div class="wrap">
-      <p class="fineprint">© 2026 Longtable Labs. Not affiliated with Google, Microsoft, or Apple.</p>
+      <p class="fineprint">© 2026 Longtable Labs LLC. Not affiliated with Google, Microsoft, or Apple.</p>
     </div>
   </footer>
 </body>
