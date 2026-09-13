@@ -198,7 +198,12 @@
                    alt="Cadent Family August month view showing imported school and sports events, several repeating across multiple days.">
             </video>
           </div>
-          <p class="cta-note">A real screen recording — plays on a loop, no sound.</p>
+          <button class="btn ghost sound-toggle" type="button" aria-pressed="false" hidden>
+            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+            <svg class="icon-sound" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+            <span class="sound-label">Play with sound</span>
+          </button>
+          <p class="cta-note">A real screen recording, narrated. It plays on a loop, muted until you turn the sound on.</p>
         </div>
       </div>
     </section>
@@ -379,6 +384,43 @@
           try { v.pause(); } catch (e) {}
         });
       }
+    })();
+
+    // Sound toggle for the narrated demo. It starts muted (browsers only autoplay
+    // muted video); the first time sound goes on it restarts from the top so the
+    // narration begins at its first line.
+    (function () {
+      var btn = document.querySelector('.sound-toggle');
+      var v = document.querySelector('.demo-phone video');
+      if (!btn || !v) return;
+      var label = btn.querySelector('.sound-label');
+      var heardFromStart = false;
+
+      function sync() {
+        var on = !v.muted && v.volume > 0;
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        label.textContent = on ? 'Mute' : 'Play with sound';
+      }
+
+      btn.addEventListener('click', function () {
+        if (v.muted || v.volume === 0) {
+          v.muted = false;
+          if (v.volume === 0) v.volume = 1;
+          if (!heardFromStart) {
+            heardFromStart = true;
+            try { v.currentTime = 0; } catch (e) {}
+          }
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else {
+          v.muted = true;
+        }
+        sync();
+      });
+      // Native controls (shown for reduced motion) can change volume too.
+      v.addEventListener('volumechange', sync);
+      btn.hidden = false;
+      sync();
     })();
   </script>
 </body>
