@@ -145,6 +145,13 @@ Qwen3 + ComfyUI stack described in the global CLAUDE.md. Never OpenArt.
 
 ## Changelog
 
+- **2026-10-21** — `privacy.html` revised for app 1.0.9: Play membership
+  record, contact links, kid mode PIN, claiming a place in the family, a
+  parent acting for a child, the Children line on claimed sign-ins, and the
+  deletion note that removing our record does not cancel a Google Play
+  subscription. Wording from `docs/PRIVACY-DRAFT-2026-10-20.md`, facts
+  verified by Captain CAD · App, **approved by Grant via Fleet Commander,
+  2026-10-21**. "Last updated" moved to October 21, 2026.
 - **2026-10-20** — Science Officer WEB · Site commissioned; charter written;
   site audit in `docs/AUDIT-2026-10-20.md`. Batch 1 (launch truth: Play
   link, pricing, no email capture) pushed as 3dde060. Batches 2–5 built on

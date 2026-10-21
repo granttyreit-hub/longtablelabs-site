@@ -50,7 +50,7 @@
       <div class="wrap prose">
         <h1>Privacy Policy</h1>
         <p class="sub">Cadent Family, a product of Longtable Labs LLC</p>
-        <p class="meta">Last updated: September 12, 2026</p>
+        <p class="meta">Last updated: October 21, 2026</p>
       </div>
     </div>
 
@@ -67,8 +67,14 @@
                  broaden those claims without checking the app code.
                - Service providers named: Render, Firebase Authentication, Firebase Cloud
                  Messaging, an email delivery provider (reminder emails), Anthropic.
+             Revised 2026-10-21: adds the Play membership (migration 032), contact links
+               (023/033, link.longtablelabs.com Worker), kid mode PIN (device-local,
+               lib/state/kid_mode.dart), member claims (036) and act-as (035) from app
+               1.0.9. Data safety form gains "Purchase history" the same day. Wording
+               approved by Grant via Fleet Commander, 2026-10-21.
              STILL OPEN:
                - Confirm the Anthropic links and their current commercial-terms wording.
+               - Postal address only if a store or region requires it.
              Have a lawyer review if you are unsure — this governs other people's data,
              including children's. -->
 
@@ -96,6 +102,7 @@
             <tr><td>Profile photos and avatars you choose to add</td><td>To personalise how family members appear in the app.</td></tr>
             <tr><td>Notification settings and device push tokens</td><td>To send the reminders you ask for, and to respect your quiet hours.</td></tr>
             <tr><td>Chores you complete, the points they earn, and rewards you ask for</td><td>To keep each member's points balance, and so a parent can approve rewards.</td></tr>
+            <tr><td>Your family's membership record from Google Play: a Google purchase token, the order numbers, the product, the subscription's state (active, in grace, cancelled or expired), its expiry date and whether it renews</td><td>To know how many schedule imports your family has each month. <strong>What we hold is that record and nothing more: the purchase happens in Google Play's own payment sheet, and the app sends us only the product name and the purchase token. No card, payment method, billing address or payer name reaches our server or the app.</strong></td></tr>
             <tr><td>Links with people in other households, and the events shared across them</td><td>So you can see the events someone in another household chooses to share with you, and share yours with them.</td></tr>
           </tbody>
         </table>
@@ -171,12 +178,74 @@
           family, using an invite code, can see the shared content of that family.
         </p>
 
+        <h2 id="membership-and-payments">Membership and payments</h2>
+        <p>
+          Cadent Family is free. A family can buy an optional monthly membership that adds
+          schedule imports. You buy it in Google Play's own payment sheet, and Google processes
+          the payment under its own terms and
+          <a href="https://policies.google.com/privacy" rel="noopener">privacy policy</a>. The
+          app sends our server the product name and a purchase token; our server asks Google
+          what that token is worth and stores the answer: the order numbers, the product, the
+          subscription's state, its expiry date and whether it renews. That record is what tells
+          the app how many imports your family has. Your card, payment method, billing address
+          and the name on the payment never reach us.
+        </p>
+        <p>
+          The subscription itself belongs to the Google account that bought it. To stop it,
+          cancel it in Google Play; it then runs to the end of the paid month and nothing else in
+          the app changes. <strong>Deleting your Cadent Family account or your family removes our
+          record of the membership but does not cancel the subscription</strong>: only Google
+          Play can do that.
+        </p>
+
+        <h2 id="contact-links">Contact links</h2>
+        <p>
+          Each person has a contact link, shown on the Contacts screen, that they can send to a
+          grandparent, a co-parent in another home or a coach. <strong>Anyone who opens your link
+          can see your display name and ask to add you as a contact</strong>; you are asked
+          before anyone is added, and you choose which events to share with each contact
+          afterwards. Because a link can be forwarded, treat it like a phone number: share it
+          with people you know, and tap <strong>Reset my link</strong> to make every copy of the
+          old one stop working.
+        </p>
+
+        <h2 id="kid-mode">Kid mode</h2>
+        <p>
+          Kid mode locks a shared tablet to one child's view behind a PIN. <strong>The PIN is
+          stored only on that tablet</strong>, as a salted hash, and is never sent to our server
+          or shared with the family. Clearing the app's data on the tablet removes it. Kid mode
+          does not create an account for the child and does not change what the server allows;
+          it only keeps the tablet on the child's view.
+        </p>
+
+        <h2 id="claiming-a-place-in-the-family">Claiming a place in the family</h2>
+        <p>
+          Children added by a parent have no account. When a child is old enough for their own
+          sign-in, a parent can make a one-time claim code. The child signs in with their own
+          Google account or email, enters the code, and that sign-in becomes attached to their
+          existing place in the family, so their chores, points and streak carry over. The code
+          works once and expires; a code cannot take over a member who already has a sign-in.
+          From then on the child's name, email and sign-in account are collected as described
+          under &ldquo;What we collect&rdquo;.
+        </p>
+
+        <h2 id="when-a-parent-acts-for-a-child">When a parent acts for a child</h2>
+        <p>
+          A parent can tick a chore or redeem a reward on a child's behalf. The points land on
+          the child, and we record which parent did it. Only the child, the parent who acted, or
+          a family parent can undo a chore completion, and only within the current period, so
+          points already earned are not quietly removed.
+        </p>
+
         <h2>Children</h2>
         <p>
           Cadent Family is intended to be set up and managed by a parent or guardian, who adds
           family members including children. A child's calendar information is entered and
           managed by the adults in their family. We do not knowingly collect information
-          directly from children outside of this family context.
+          directly from children outside of this family context. When a parent chooses to give
+          a grown child their own sign-in (see
+          <a href="#claiming-a-place-in-the-family">Claiming a place in the family</a>), that
+          child becomes an ordinary account holder.
           <!-- REVIEW: if you intend to allow children to hold their own login, you will likely
                need COPPA (US) / age-of-consent handling. Confirm your intended model here. -->
         </p>
@@ -213,6 +282,10 @@
           <li>Your devices and notification settings.</li>
           <li>Your links with other households.</li>
           <li>Your points history.</li>
+          <li>If the family is deleted with you: the family's membership record and its record of
+            schedule imports used. If the family carries on, those records stay with the family
+            with your name removed from them. <strong>Neither case cancels a Google Play
+            subscription; cancel that in Google Play.</strong></li>
         </ul>
 
         <h3>What is kept</h3>
