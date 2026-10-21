@@ -1,7 +1,8 @@
 # Cadent Family privacy policy — proposed additions for 1.0.9
 
-Draft by Science Officer WEB · Site, 2026-10-20, for Fleet Commander to carry
-to Grant. **Nothing here is on the site.** `privacy.html` changes only after
+Draft by Science Officer WEB · Site, 2026-10-20, revised the same day with
+facts verified against the code by Captain CAD · App (migrations 012, 032;
+billing path). For Fleet Commander to carry to Grant. **Nothing here is on the site.** `privacy.html` changes only after
 Grant approves the exact wording below; then "Last updated" moves to the day
 it ships, and `fcc_app/PLAY_DATA_SAFETY.md` and the Play Data safety form
 gain the Purchase history row at the same time.
@@ -26,20 +27,27 @@ Insert after the row "Chores you complete, the points they earn, and rewards you
 
 | What | Why |
 |---|---|
-| Your family's membership status from Google Play: the purchase token, order number, whether it is active, and when it ends | To know how many schedule imports your family has each month. **We never see your card number, billing address or the name on your payment method; Google handles the payment.** |
+| Your family's membership record from Google Play: a Google purchase token, the order numbers, the product, the subscription's state (active, in grace, cancelled or expired), its expiry date and whether it renews | To know how many schedule imports your family has each month. **What we hold is that record and nothing more: the purchase happens in Google Play's own payment sheet, and the app sends us only the product name and the purchase token. No card, payment method, billing address or payer name reaches our server or the app.** |
 
 ## B. New section, after "Family sharing and privacy within a family"
 
 ### Membership and payments
 
 Cadent Family is free. A family can buy an optional monthly membership that
-adds schedule imports. You buy it through Google Play, and Google processes
-the payment under its own terms and
-[privacy policy](https://policies.google.com/privacy). Google tells our server
-only that a membership exists, its order number and when it expires; we store
-that so the app knows how many imports your family has. We do not receive
-your card details. Cancel at any time in Google Play; the membership runs to
-the end of the paid month and nothing else in the app changes.
+adds schedule imports. You buy it in Google Play's own payment sheet, and
+Google processes the payment under its own terms and
+[privacy policy](https://policies.google.com/privacy). The app sends our
+server the product name and a purchase token; our server asks Google what
+that token is worth and stores the answer: the order numbers, the product,
+the subscription's state, its expiry date and whether it renews. That record
+is what tells the app how many imports your family has. Your card, payment
+method, billing address and the name on the payment never reach us.
+
+The subscription itself belongs to the Google account that bought it. To
+stop it, cancel it in Google Play; it then runs to the end of the paid month
+and nothing else in the app changes. **Deleting your Cadent Family account
+or your family removes our record of the membership but does not cancel the
+subscription**: only Google Play can do that.
 
 ### Contact links
 
@@ -78,7 +86,7 @@ within the current period, so points already earned are not quietly removed.
 
 ## C. "What is deleted" list — one added line
 
-- Your family's Google Play membership record, if you were the family's only parent and the family is deleted with you. (A membership belongs to the family, not the person; if the family carries on, it stays with the family.)
+- If the family is deleted with you: the family's membership record and its record of schedule imports used. If the family carries on, those records stay with the family with your name removed from them. **Neither case cancels a Google Play subscription; cancel that in Google Play.**
 
 ## D. Owner-notes comment (invisible) — replace the "STILL OPEN" block
 
@@ -103,9 +111,12 @@ within the current period, so points already earned are not quietly removed.
    to anyone holding the link (this is how a pasted link unfurls as "Add
    Grant"). It is true today. Keep the sentence, or soften to "can see who the
    link belongs to"?
-2. **Section C** on what happens to a membership record at deletion: I inferred
-   "belongs to the family" from `play_subscriptions` being keyed by family.
-   Captain CAD · App should confirm the deletion path before this ships.
+2. *Answered 2026-10-20 by Captain CAD · App.* Deleting the family deletes
+   its membership record and import-credit ledger (`ON DELETE CASCADE`,
+   migrations 032:52 and 012:27); if the family continues, the records stay
+   and the departing person's id is set to NULL. Sections B and C above say
+   exactly that, and both state that deletion does not cancel the Google
+   Play subscription.
 3. The policy's existing Children section says children have no login. With
    claims, a child *can* end up with a login at an age the parent chooses.
    Suggested one-line addition to "Children": "When a parent chooses to give a
