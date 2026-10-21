@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Longtable Labs — Cadent Family and Echo Night</title>
   <meta name="description" content="Longtable Labs is a small studio building calm, honest software for family life. Cadent Family, a shared family organiser, is on Google Play now; Echo Night, a bat game, is on its way.">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://longtablelabs.com/">
   <meta property="og:type" content="website">
@@ -79,7 +81,7 @@
         <div class="product-card">
           <picture>
             <source srcset="assets/cadent-mark.webp" type="image/webp">
-            <img class="p-logo" src="assets/cadent-mark.png" alt="Cadent Family logo" aria-hidden="true" width="78" height="78">
+            <img class="p-logo" src="assets/cadent-mark.png" alt="" aria-hidden="true" width="78" height="78">
           </picture>
           <div>
             <span class="tag">Our first product · On Google Play</span>
@@ -95,7 +97,7 @@
           </div>
         </div>
         <div class="product-card" id="echo-night">
-          <img class="p-logo" src="assets/echo-night-mark.png" alt="Echo Night icon" aria-hidden="true" width="78" height="78">
+          <picture><source srcset="assets/echo-night-mark.webp" type="image/webp"><img class="p-logo" src="assets/echo-night-mark.png" alt="" aria-hidden="true" width="78" height="78"></picture>
           <div>
             <span class="tag">Coming to Google Play</span>
             <h3>Echo Night</h3>
@@ -124,7 +126,7 @@
       <div class="wrap hero-grid">
         <div>
           <span class="eyebrow">A shared family organiser</span>
-          <h1>Every family runs on paper.</h1>
+          <h2 class="display">Every family runs on paper.</h2>
           <p class="lead">
             School newsletters, sports cards, a note stuck to the fridge. Cadent Family
             puts it all in one place — photograph a schedule and it becomes calendar
@@ -139,7 +141,7 @@
         <div class="shot" aria-hidden="false">
           <figure>
             <div class="frame">
-              <img loading="lazy" width="1080" height="2400" src="assets/screenshots/month-view.png" alt="Cadent Family month calendar on a phone, showing colour-coded events for a sample family across the weeks of a month" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <picture><source srcset="assets/screenshots/month-view.webp" type="image/webp"><img width="1080" height="2400" fetchpriority="high" src="assets/screenshots/month-view.png" alt="Cadent Family month calendar on a phone, showing colour-coded events for a sample family across the weeks of a month" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='block'"></picture>
               <div class="placeholder" style="display:none">Month view
                 <span>real app screenshot — added before launch</span>
               </div>
@@ -238,7 +240,7 @@
         </div>
         <div class="demo-showcase">
           <div class="demo-phone">
-            <video autoplay loop muted playsinline preload="metadata"
+            <video loop muted playsinline preload="none" data-autoplay width="1080" height="2400"
                    poster="assets/demo/ai-import-demo-poster.jpg"
                    aria-label="Screen recording of Cadent Family importing a schedule from a photo: a handwritten activity list and a typed sports card are read into events, repeats detected, one event deselected, then the kept events approved and shown on the month calendar.">
               <source src="assets/demo/ai-import-demo.webm" type="video/webm">
@@ -309,7 +311,7 @@
           <div class="shot">
             <figure>
               <div class="frame">
-                <img loading="lazy" width="1080" height="2400" src="assets/screenshots/import-review.png" alt="The schedule-import review list: events read from a photographed sports card, each with a checkbox to approve before it is added to the calendar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <picture><source srcset="assets/screenshots/import-review.webp" type="image/webp"><img loading="lazy" width="1080" height="2400" src="assets/screenshots/import-review.png" alt="The schedule-import review list: events read from a photographed sports card, each with a checkbox to approve before it is added to the calendar" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"></picture>
                 <div class="placeholder" style="display:none;flex-direction:column">Import review<span>added before launch</span></div>
               </div>
               <figcaption>Review what the photo found, mid-approval</figcaption>
@@ -318,7 +320,7 @@
           <div class="shot">
             <figure>
               <div class="frame">
-                <img loading="lazy" width="1080" height="2400" src="assets/screenshots/week-view.png" alt="Week view of the calendar with several family members' events colour-coded across the days" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <picture><source srcset="assets/screenshots/week-view.webp" type="image/webp"><img loading="lazy" width="1080" height="2400" src="assets/screenshots/week-view.png" alt="Week view of the calendar with several family members' events colour-coded across the days" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"></picture>
                 <div class="placeholder" style="display:none;flex-direction:column">Week view<span>added before launch</span></div>
               </div>
               <figcaption>Everyone's week, colour-coded</figcaption>
@@ -327,7 +329,7 @@
           <div class="shot">
             <figure>
               <div class="frame">
-                <img loading="lazy" width="1080" height="2400" src="assets/screenshots/privacy-picker.png" alt="The who-can-see-this picker on an event, letting you choose everyone, just yourself, or a chosen list of family members" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <picture><source srcset="assets/screenshots/privacy-picker.webp" type="image/webp"><img loading="lazy" width="1080" height="2400" src="assets/screenshots/privacy-picker.png" alt="The who-can-see-this picker on an event, letting you choose everyone, just yourself, or a chosen list of family members" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"></picture>
                 <div class="placeholder" style="display:none;flex-direction:column">Privacy picker<span>added before launch</span></div>
               </div>
               <figcaption>Choose who can see each event</figcaption>
@@ -336,7 +338,7 @@
           <div class="shot">
             <figure>
               <div class="frame">
-                <img loading="lazy" width="1080" height="2400" src="assets/screenshots/today-view.png" alt="The Today screen with a friendly greeting and the sample family's upcoming events for the day" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <picture><source srcset="assets/screenshots/today-view.webp" type="image/webp"><img loading="lazy" width="1080" height="2400" src="assets/screenshots/today-view.png" alt="The Today screen with a friendly greeting and the sample family's upcoming events for the day" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"></picture>
                 <div class="placeholder" style="display:none;flex-direction:column">Today<span>added before launch</span></div>
               </div>
               <figcaption>Today, at a glance</figcaption>
@@ -345,7 +347,7 @@
           <div class="shot">
             <figure>
               <div class="frame">
-                <img loading="lazy" width="1080" height="2400" src="assets/screenshots/theme-packs.png" alt="The theme gallery: light and dark looks above a shelf of theme packs, each card previewing the colours of that pack" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <picture><source srcset="assets/screenshots/theme-packs.webp" type="image/webp"><img loading="lazy" width="1080" height="2400" src="assets/screenshots/theme-packs.png" alt="The theme gallery: light and dark looks above a shelf of theme packs, each card previewing the colours of that pack" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"></picture>
                 <div class="placeholder" style="display:none;flex-direction:column">Themes<span>added before launch</span></div>
               </div>
               <figcaption>Dress it in a look the whole family sees</figcaption>
@@ -440,16 +442,25 @@
   </footer>
 
   <script>
-    // Respect reduced-motion: don't autoplay the demo; offer manual controls.
+    // The narrated demo starts (muted) only once it scrolls into view, so its
+    // 3 MB is not fetched by visitors who never reach it. With reduced motion
+    // it never autoplays and shows native controls instead.
     (function () {
+      var v = document.querySelector('video[data-autoplay]');
+      if (!v) return;
       var mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
-      if (mq && mq.matches) {
-        document.querySelectorAll('video[autoplay]').forEach(function (v) {
-          v.removeAttribute('autoplay');
-          v.setAttribute('controls', '');
-          try { v.pause(); } catch (e) {}
-        });
+      if (mq && mq.matches) { v.setAttribute('controls', ''); return; }
+      function start() {
+        var p = v.play();
+        if (p && p.catch) p.catch(function () { v.setAttribute('controls', ''); });
       }
+      if (!('IntersectionObserver' in window)) { start(); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { start(); io.disconnect(); }
+        });
+      }, { rootMargin: '200px 0px' });
+      io.observe(v);
     })();
 
     // Sound toggle for the narrated demo. It starts muted (browsers only autoplay
