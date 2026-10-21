@@ -336,3 +336,36 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .site-footer .fineprint { color: var(--ink-faint); font-size: .85rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ===== Product pages ===== */
+.frame-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.5rem; }
+.frame-card { margin: 0; }
+.frame-card img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: var(--shadow); }
+.frame-card figcaption { text-align: center; margin-top: .7rem; font-size: .92rem; color: var(--ink-soft); }
+.frame-card figcaption strong { display: block; color: var(--plum); font-family: var(--display); font-size: 1.05rem; }
+
+/* Echo Night: the game's own night palette, kept inside its page */
+.en-hero { background: #06081a; color: #cfd3e6; padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2rem, 5vw, 3rem); }
+.en-feature { width: 100%; max-width: 54rem; height: auto; display: block; margin: 0 auto 2rem; border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+.en-intro { max-width: 44rem; margin: 0 auto; }
+.en-intro .tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; color: #4fe3d8; }
+.en-hero h1 { color: #f1e9ff; margin: .3rem 0 .4rem; }
+.en-hero .lead { color: #e2d6ff; font-size: clamp(1.15rem, 2.5vw, 1.4rem); font-family: var(--display); font-style: italic; }
+.en-hero p { color: #b9bdd4; }
+.en-hero .btn { background: #4fe3d8; color: #06081a; }
+.en-hero .btn:hover { background: #7cf0e8; color: #06081a; }
+.en-hero .btn.ghost { background: transparent; color: #e2d6ff; border-color: rgba(226, 214, 255, .4); }
+.en-hero .btn.ghost:hover { border-color: #4fe3d8; background: rgba(79, 227, 216, .12); color: #fff; }
+.en-body { background: #0c1030; }
+.en-body .feature { background: #141a44; border-color: #26306a; box-shadow: none; }
+.en-body .feature h3 { color: #f1e9ff; }
+.en-body .feature p { color: #b9bdd4; }
+.en-body h2 { color: #f1e9ff; }
+.en-body .section-head p { color: #b9bdd4; }
+.wide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+.wide-card { margin: 0; }
+.wide-card img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid #26306a; }
+.wide-card figcaption { margin-top: .6rem; font-size: .92rem; color: #b9bdd4; font-family: var(--display); font-style: italic; }
+.en-list { color: #b9bdd4; max-width: 44rem; padding-left: 1.2rem; }
+.en-list li { margin-bottom: .5rem; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: .92em; background: rgba(0,0,0,.05); padding: .1em .3em; border-radius: 4px; }
