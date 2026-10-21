@@ -146,7 +146,15 @@ Qwen3 + ComfyUI stack described in the global CLAUDE.md. Never OpenArt.
 ## Changelog
 
 - **2026-10-20** — Science Officer WEB · Site commissioned; charter written;
-  site audit in `docs/AUDIT-2026-10-20.md`.
+  site audit in `docs/AUDIT-2026-10-20.md`. Batch 1 (launch truth: Play
+  link, pricing, no email capture) pushed as 3dde060. Batches 2–5 built on
+  stacked branches (features for 1.0.9; social links, demo clips, Open
+  Graph, sitemap; polish; cadent.html, echo-night.html, 404) awaiting the
+  push word. Privacy wording for 1.0.9 drafted in
+  `docs/PRIVACY-DRAFT-2026-10-20.md`, not applied. Batch 3 touched both
+  privacy pages in `<head>` (meta, icons, font preload) and the footer
+  (Products and Follow columns) only; no policy text changed (Fleet
+  Commander accepted this 2026-10-20).
 - 2026-10-20 — (Ensign CAD · Play & Web) Echo Night privacy page revised for
   house ads; Echo Night product card added.
 - 2026-10-19 — Demo video sound button.
