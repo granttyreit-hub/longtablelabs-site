@@ -208,6 +208,17 @@ section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .get-card .btn.ghost:hover { background: rgba(255,255,255,.14); border-color: #fff; }
 @media (max-width: 560px) { .get-actions { width: 100%; } }
 
+/* Short clips */
+.clips { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 2.5rem; }
+.clip { margin: 0; width: 100%; max-width: 300px; }
+.clip .demo-phone { max-width: 300px; }
+.clip video { width: 100%; height: auto; display: block; aspect-ratio: 9 / 16; background: #14263d; }
+.clip figcaption { text-align: center; margin-top: .8rem; font-size: .92rem; color: var(--ink-soft); }
+.clip figcaption strong { display: block; color: var(--plum); font-family: var(--display); font-size: 1.1rem; }
+.clip figcaption span { display: block; margin-top: .2rem; }
+.clip-links a { font-weight: 600; }
+.centered-note { text-align: center; margin-top: 1.8rem; }
+
 /* Live demo video */
 .demo-showcase { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 .demo-phone {
