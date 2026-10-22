@@ -145,6 +145,12 @@ Qwen3 + ComfyUI stack described in the global CLAUDE.md. Never OpenArt.
 
 ## Changelog
 
+- **2026-10-22** — Pushed batch 7 (privacy, 515e752) and batch 4 part 2
+  (f0427cf): six 1.0.9 tablet screenshots from Science Officer VID on the
+  home page and `cadent.html`, Citrus pack, demo family. The Contacts frame
+  (`week-view` slot) has the demo account's link code masked as XXXXXXXX
+  at Fleet Commander's condition. **Rule:** mask any contact-link or claim
+  code in a screenshot before it lands here, live or reset.
 - **2026-10-21** — `privacy.html` revised for app 1.0.9: Play membership
   record, contact links, kid mode PIN, claiming a place in the family, a
   parent acting for a child, the Children line on claimed sign-ins, and the
