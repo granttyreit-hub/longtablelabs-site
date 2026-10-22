@@ -81,6 +81,10 @@ attribution line the session is given.
   shipped. No user counts, no testimonials, no store badge unless it links to
   a live listing (Cadent's is live; Echo Night's is not yet).
 - Copy voice: calm, plain, short sentences. "The app proposes; you decide."
+- **Cadent pricing line (Grant, 2026-10-22):** "Cadent Family membership
+  $1.99/month on Google Play". Never "free" or "trial" in marketing copy.
+  The privacy page may state facts (installing costs nothing; the family
+  membership is optional) but never uses the word "free".
 - Naming: statements about who we are say **"Longtable Labs LLC"** (privacy
   pages, footers); plain brand mentions stay "Longtable Labs". Public Play
   developer name is "Longtable Labs".
@@ -131,8 +135,9 @@ Qwen3 + ComfyUI stack described in the global CLAUDE.md. Never OpenArt.
 - Cadent Family **1.0.9 is live on Google Play**
   (`com.longtablelabs.cadent`, https://play.google.com/store/apps/details?id=com.longtablelabs.cadent).
 - Membership: **$1.99/month** for 10 AI schedule imports a month, rolling
-  over to a cap of 20; without it a family keeps a 3-import trial and every
-  other feature. Theme packs are free.
+  over to a cap of 20. (App fact, not copy: non-subscribers keep a 3-import
+  allowance and every other feature. The site words pricing only as the
+  pricing line above.)
 - 1.0.9 people model: kid mode on a shared tablet, "Viewing as" acts for the
   child, bounded undo on chore completions, claim a device so a grown child
   keeps their points. Realtime catch-up. Permanent contact links.
